@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "title": "apple",
+      "description": "iphone 10",
+      "price": 10000,
+      "image": "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP770/iphonex.png",
+      "id": 2
+    },
+    {
+      "title": "gogog",
+      "description": "ert",
+      "price": 234,
+      "image": "ert",
+      "id": 3
+    },
+    {
+      "title": "cahap chap ",
+      "description": "sdfghjk",
+      "price": 16789,
+      "image": "dfghj",
+      "id": 4
+    },
+    {
+      "title": "hiu",
+      "description": "kjsdnkjn",
+      "price": 42299,
+      "image": "kjbskv",
+      "id": 5
+    }
+  ]
+}
