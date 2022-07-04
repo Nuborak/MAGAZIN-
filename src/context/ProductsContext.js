@@ -50,6 +50,7 @@ const ProductsContextProvider = ({ children }) => {
 
     dispatch({
       type: "GET_ONE",
+      payload: res.data,
     });
   }
   // ! update

@@ -16,6 +16,8 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import MenuIcon from "@mui/icons-material/Menu";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import { Badge } from "@mui/material";
+import { cartContext } from "../../context/CartContext";
 
 // const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -23,6 +25,11 @@ const settings = ["Profile", "Account", "Dashboard", "Logout"];
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
+
+  const { getCart, count } = React.useContext(cartContext);
+  React.useEffect(() => {
+    getCart();
+  }, []);
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -156,7 +163,9 @@ const Header = () => {
             <IconButton
               onClick={() => navigate("/cart")}
               aria-label="add to shopping cart">
-              <AddShoppingCartIcon style={{ color: "white" }} />
+              <Badge badgeContent={count} color="primary">
+                <AddShoppingCartIcon style={{ color: "white" }} />
+              </Badge>
             </IconButton>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
